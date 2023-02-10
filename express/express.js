@@ -16,7 +16,10 @@ app.use(
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: true,
-    name: 'express-session'
+    name: 'express-session',
+    cookie: {
+      maxAge: 10000,
+    },
   }),
 );
 app.disable('x-powered-by');
